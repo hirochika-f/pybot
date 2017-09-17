@@ -2,17 +2,20 @@ import urllib.request
 import json
 import os
 
-class HourRain():
+class HourRain(mode=None):
 
   def __init__(self):
 
     # YahooAPI の URL
     base_url = "https://map.yahooapis.jp/weather/V1/place?"
     # 調べたい場所の経度緯度
-    coordinates_shinyoko = "139.620759,35.511117"
+    if mode is None:
+      coordinates = "139.620759,35.511117"
+    else:
+      coordinates = "139.388959,35.459854"
     # ClientID
     client_id = os.environ["YAHOO_API_ID"]
-    self.url = "%scoordinates=%s&appid=%s&output=json" % (base_url, coordinates_shinyoko, client_id)
+    self.url = "%scoordinates=%s&appid=%s&output=json" % (base_url, coordinates, client_id)
 
   def return_rainfall(self, message):
     # urllib を使って対象 URL の内容をロード
@@ -25,7 +28,10 @@ class HourRain():
     for index, var in enumerate(weather_info):
         info = self.return_rain_level(var["Rainfall"])
         if index == 0:
-          before_words = "今、"
+          if mode is None:
+            before_words = "新横浜では今、"
+          else:
+            before_words = "海老名では今、"
           if var['Rainfall'] == 0.0:
             after_words = "っていない"
           else:
