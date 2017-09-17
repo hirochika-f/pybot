@@ -22,7 +22,7 @@ class HourRain():
     weather_info = data_json['Feature'][0]['Property']['WeatherList']['Weather']
     base_minutes = 10
 
-    for index, var in enumrate(weather_info):
+    for index, var in enumerate(weather_info):
         info = self.return_rain_level(var["Rainfall"])
         if index == 0:
           before_words = "今、"
