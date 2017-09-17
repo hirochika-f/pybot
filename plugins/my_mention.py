@@ -8,7 +8,7 @@ from plugins.scripts.hour_rain import HourRain
 #  weather_class = HourRain("e")
 #  weather_class.return_rainfall(message)
 
-@respond_to('(雨)')
+@respond_to('雨')
 def confirm_weather(message, something):
   weather_class = HourRain()
   weather_class.return_rainfall(message)
