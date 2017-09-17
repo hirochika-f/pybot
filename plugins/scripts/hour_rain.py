@@ -42,7 +42,7 @@ class HourRain():
         message.send(before_words + info + after_words)
 
 
-  def retrun_rain_level(self, rainfall):
+  def return_rain_level(self, rainfall):
     if (rainfall == 0.0):
       rain_level = "雨は降"
     elif (rainfall < 20.0):
