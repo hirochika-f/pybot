@@ -31,7 +31,7 @@ class HourRain():
           #if mode is None:
           before_words = "新横浜では今、"
           #else:
-           # before_words = "海老名では今、"
+          # before_words = "海老名では今、"
           if var['Rainfall'] == 0.0:
             after_words = "っていない"
           else:
