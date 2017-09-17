@@ -9,7 +9,7 @@ class HourRain():
     # YahooAPI の URL
     base_url = "https://map.yahooapis.jp/weather/V1/place?"
     # 調べたい場所の経度緯度
-    coordinates_shinyoko = "139.620759, 35.511117"
+    coordinates_shinyoko = "139.620759,35.511117"
     # ClientID
     client_id = os.environ["YAHOO_API_ID"]
     self.url = "%scoordinates=%s&appid=%s&output=json" % (base_url, coordinates_shinyoko, client_id)
