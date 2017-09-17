@@ -1,5 +1,6 @@
 import urllib.request
 import json
+import os
 
 class HourRain():
 
@@ -10,7 +11,7 @@ class HourRain():
     # 調べたい場所の経度緯度
     coordinates_shinyoko = "139.620759, 35.511117"
     # ClientID
-    client_id = "dj00aiZpPW9rVEtPN3NOUHFHTSZzPWNvbnN1bWVyc2VjcmV0Jng9NWQ-"
+    client_id = os.environ["YAHOO_API_ID"]
     self.url = "%scoordinates=%s&appid=%s&output=json" % (base_url, coordinates_shinyoko, client_id)
 
   def return_rainfall(self, message):
