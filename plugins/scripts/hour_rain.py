@@ -16,7 +16,8 @@ class HourRain():
 
   def return_rainfall(self, message):
     # urllib を使って対象 URL の内容をロード
-    response = urllib.request.urlopen(self.url).read()
+    #response = urllib.request.urlopen(self.url).read()
+    response = urllib.urlopen(self.url).read()
     # ロードした JSON
     data_json = json.loads(response.decode("utf-8"))
     weather_info = data_json['Feature'][0]['Property']['WeatherList']['Weather']
