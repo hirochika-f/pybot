@@ -2,7 +2,7 @@ import urllib.request
 import json
 import os
 
-class HourRain():
+class HourRain(message):
 
   def __init__(self):
 
