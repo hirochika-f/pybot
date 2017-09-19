@@ -5,8 +5,9 @@ from plugins.scripts.hour_rain import HourRain
 
 @respond_to('(^雨海老名$)')
 def confirm_weather_e(message, something):
-  weather_class = HourRain(mode="e")
-  weather_class.return_rainfall(message)
+  #weather_class = HourRain(mode="e")
+  #weather_class.return_rainfall(message)
+  message.reply("ebina")
 
 @respond_to('(^雨$)')
 def confirm_weather(message, something):
