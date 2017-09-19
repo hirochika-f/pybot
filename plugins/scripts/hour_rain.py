@@ -2,7 +2,7 @@ import urllib.request
 import json
 import os
 
-class HourRainS(message):
+class HourRainS():
 
   def __init__(self):
 
@@ -58,7 +58,7 @@ class HourRainS(message):
       rain_level = "すぐ帰れ!!息苦しくなるような圧迫感がある猛烈な雨が降"
     return rain_level
 
-class HourRainE(message):
+class HourRainE():
 
   def __init__(self):
 
