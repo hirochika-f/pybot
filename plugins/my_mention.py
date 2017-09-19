@@ -10,5 +10,5 @@ from plugins.scripts.hour_rain import HourRain
 
 @respond_to('(^雨$)')
 def confirm_weather(message, something):
-  weather_class = HourRain()
+  weather_class = HourRain(something)
   weather_class.return_rainfall(message)
